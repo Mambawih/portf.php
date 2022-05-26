@@ -1,20 +1,33 @@
-<?php
+ <?php
 include "database.php";
 include "function.php";
 $success="";
 
-if (isset($_POST['submit'])){
-  $name=get_safe_value($con,$_POST['name']);
-  $text=get_safe_value($con,$_POST['text']);
-  $content=get_safe_value($con,$_POST['content']);
+  $name=mysqli_real_escape_string($con,$_POST['name']);
+  $text=mysqli_real_escape_string($con,$_POST['text']);
+  $content=mysqli_real_escape_string($con,$_POST['content']);
 
   $id="INSERT INTO trial(name,text,content)VALUES('$name','$text','$content')";
-  if($id>0){
-    $success = "Registration successful.";
-  }else{
-    echo "Please try after sometime";
-  }
-}
+
+  if($con->query($id) === TRUE){
+     $success= "Record Added Sucessfully";
+     ?>
+     <script>
+       window.location.href='index.php#success';
+     </script>
+     <?php
+    }
+    else
+    {
+     echo "Error" . $id . "<br/>" . $con->error;
+     ?>
+     <script>
+       window.location.href='index.php#fail';
+     </script>
+     <?php
+    }
+    $con->close();
+
 ?>
 
 
@@ -49,9 +62,3 @@ if (isset($_POST['submit'])){
 // }
 // $conn->close();
 ?>
-
-<div>
-  <?php
-  echo $success;
-  ?>
-</div>
