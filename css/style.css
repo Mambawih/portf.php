@@ -241,6 +241,7 @@ span>.home-cont{
 	font-size: 1rem;
 	padding: 0 0 0 1rem;
 	border: 1px solid black;
+	text-transform: none;
 }
 .con-submit{
 	width: 200%;

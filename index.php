@@ -107,13 +107,13 @@ if(isset($_POST['submit'])){
                     <?php echo $fail ?>
                     <form method="post">
                         <label class="con-label" for="Name">Name</label><br>
-                            <input class="con-input" type="text" required name="name" placeholder="Name"><br>
+                            <input class="con-input" type="text" required name="name" placeholder="e.g. Isaac L Songate"><br>
                         <label class="con-label" for="Name">Mobile number(Optional)</label><br>
-                            <input class="con-input" type="text" name="mobile" placeholder="Mobile"><br>
+                            <input class="con-input" type="tel" pattern="[0-9]{10}" name="mobile" placeholder="e.g. 1234567890" maxlength="10"><br>
                         <label class="con-label" for="email">email</label><br>
-                            <input class="con-input" type="email" required name="email" placeholder="email"><br>
+                            <input class="con-input" type="email" required name="email" placeholder="e.g. songate.isaac@gmail.com"><br>
                         <label class="con-label" for="subject">subject</label><br>
-                            <input class="con-input" type="text" name="subject" required placeholder="subject"><br>
+                            <input class="con-input" type="text" name="subject" required placeholder="Subject"><br>
                         <label class="con-label" for="message">message</label><br>
                             <input class="con-input" type="text" name="message" required placeholder="Message(800 words)"><br>
                         <input class="con-submit" name="submit" type="submit" value="Submit">

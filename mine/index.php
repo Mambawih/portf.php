@@ -12,7 +12,8 @@ $res=mysqli_query($con,$sql);
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title></title>
+        <title>Portfolio Admin Page</title>
+        <link rel="icon" href="../img/avatar.jpg">
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
@@ -33,18 +34,13 @@ $res=mysqli_query($con,$sql);
                     <?php 
                         $i=1;
                         while($row=mysqli_fetch_assoc($res)){
-                        $id=$row['id'];
-                        $name=$row['name'];
-                        $mobile=$row['mobile'];
-                        $email=$row['email'];
-                        $subject=$row['subject'];
-                        $message=$row['message'];?>
+                        ?>
                         <tr>
                             <td style="text-align:center;"><?php echo $i; ?></td>
-                            <td><?php echo $name; ?></td>
-                            <td><?php echo $mobile; ?></td>
-                            <td><?php echo $email; ?></td>
-                            <td><?php echo $subject; ?></td>
+                            <td><?php echo $row['name']; ?></td>
+                            <td><?php echo $row['mobile']; ?></td>
+                            <td><?php echo $row['email']; ?></td>
+                            <td><?php echo $row['subject']; ?></td>
                             <td style="text-align:center;">
                                 <?php 
                                 $dateStr=strtotime($row['added_on']);
