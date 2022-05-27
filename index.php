@@ -1,5 +1,37 @@
 <?php
 include "header.php";
+$success="";
+$fail="";
+
+if(isset($_POST['submit'])){
+  $name=mysqli_real_escape_string($con,$_POST['name']);
+  $mobile=mysqli_real_escape_string($con,$_POST['mobile']);
+  $email=mysqli_real_escape_string($con,$_POST['email']);
+  $subject=mysqli_real_escape_string($con,$_POST['subject']);
+  $message=mysqli_real_escape_string($con,$_POST['message']);
+
+  $id="INSERT INTO trial(name,mobile,email,subject,message)VALUES('$name','$mobile','$email','$subject','$message')";
+
+  if($con->query($id) === TRUE){
+     $success= "Message sent sucessfully.";
+     ?>
+     <script>
+       window.location.href='index.php#contact'
+     </script>
+     <?php
+    }
+    else
+    {
+     $fail = "Something went wrong, please try again later."
+     ?>
+     <script>
+       window.location.href='index.php#contact';
+     </script>
+     <?php
+    }
+    $con->close();
+}
+
 ?>
 
 <section class="container">
@@ -71,16 +103,20 @@ include "header.php";
                     </li>
                 </div>
                 <div class="con-form">
-                    <form action="submit.php" method="post">
+                    <?php echo $success ?>
+                    <?php echo $fail ?>
+                    <form method="post">
                         <label class="con-label" for="Name">Name</label><br>
-                        <input class="con-input" type="text" name="name" placeholder="Name"><br>
+                            <input class="con-input" type="text" required name="name" placeholder="Name"><br>
+                        <label class="con-label" for="Name">Mobile number(Optional)</label><br>
+                            <input class="con-input" type="text" name="mobile" placeholder="Mobile"><br>
                         <label class="con-label" for="email">email</label><br>
-                        <input class="con-input" type="text" name="text" placeholder="email"><br>
+                            <input class="con-input" type="email" required name="email" placeholder="email"><br>
                         <label class="con-label" for="subject">subject</label><br>
-                        <input class="con-input" type="text" name="content" placeholder="subject"><br>
+                            <input class="con-input" type="text" name="subject" required placeholder="subject"><br>
                         <label class="con-label" for="message">message</label><br>
-                        <input class="con-input" type="text" max-width="400" placeholder="Message"><br>
-                        <input class="con-submit" type="submit" value="Submit">
+                            <input class="con-input" type="text" name="message" required placeholder="Message(800 words)"><br>
+                        <input class="con-submit" name="submit" type="submit" value="Submit">
                     </form>
                 </div>
             </div>
