@@ -3,6 +3,7 @@
 <!-- //     <script>window.location.href="login.php"</script>--><?php 
 // }
 include "../database.php";
+include "../function.php";
 
 $sql="select * from trial order by id";
 $res=mysqli_query($con,$sql);
@@ -22,8 +23,10 @@ $res=mysqli_query($con,$sql);
                         <tr>
                             <th width="5%">Sl.no.</th>
                             <th width="15%">Name</th>
-                            <th width="20%">Text</th>
-                            <th width="60%">Content</th>
+                            <th width="20%">Mobile</th>
+                            <th width="20%">Email</th>
+                            <th width="25%">Subject</th>
+                            <th width="15%">Added on</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -32,13 +35,23 @@ $res=mysqli_query($con,$sql);
                         while($row=mysqli_fetch_assoc($res)){
                         $id=$row['id'];
                         $name=$row['name'];
-                        $text=$row['text'];
-                        $content=$row['content'];?>
+                        $mobile=$row['mobile'];
+                        $email=$row['email'];
+                        $subject=$row['subject'];
+                        $message=$row['message'];?>
                         <tr>
-                            <td><?php echo $i; ?></td>
+                            <td style="text-align:center;"><?php echo $i; ?></td>
                             <td><?php echo $name; ?></td>
-                            <td><?php echo $text; ?></td>
-                            <td><?php echo $content; ?></td>
+                            <td><?php echo $mobile; ?></td>
+                            <td><?php echo $email; ?></td>
+                            <td><?php echo $subject; ?></td>
+                            <td style="text-align:center;">
+                                <?php 
+                                $dateStr=strtotime($row['added_on']);
+                                echo date('j M, Y',$dateStr);?><br><?php
+                                echo time_elapsed_string($row['added_on'])
+                                ?>
+                            </td>
                         </tr>
                         <?php
                         $i++;
