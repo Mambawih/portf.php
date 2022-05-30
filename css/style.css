@@ -95,9 +95,6 @@ html::-webkit-scrollbar-thumb{
 	}
   }
 
-.content>span>p{
-	font-size: 4rem;
-}
 
 
 .content>span>pre{
@@ -204,6 +201,12 @@ span>.home-cont{
 .tdlist{
 	font-size: 1.5rem;
 	margin: 1rem;
+}
+.success{
+	color: #2a40ff;
+}
+.danger{
+	color: #e00707;
 }
 
 /* Hide read more portion */
@@ -355,7 +358,7 @@ table{
 }
 
 
-@media (max-width:450px) {
+@media (max-width:550px) {
 
 	.navbar{
 		display: none;
@@ -454,6 +457,52 @@ table{
 	/* slide in from the left */
 	#menuToggle input:checked~ul{
 		transform: none;
+	}
+
+	.content>span>p{
+		font-size: 2.5rem;
+		padding: 0;
+		margin: 1rem;
+	}
+	.something .btn{
+		margin-left: 1rem;
+	}
+	span .home-cont{
+		margin: 1rem;
+		font-size: 1rem;
+	}
+	.img{
+		display: none;
+	}
+	.about p{
+		padding: 0 1rem 0 1rem;
+	}
+	.abt-content{
+		width: 100%;
+		padding: 0;
+		color: #ffffff;
+	}
+	.abt-content>p{
+		font-size: 1rem;
+	}
+	.abt-img{
+		display: none;
+	}
+	.projects>.pro-content{
+		padding: 0;	
+	}
+	.pro-content p,h3{
+		padding: 0 1rem 0 1rem;
+	}
+	#myBtn,#myBtn1{
+		padding: 1rem;
+	}
+	.container h1{
+		padding: 1rem;
+	}
+  
+	#contact{
+		padding: 0;
 	}
 
 }
