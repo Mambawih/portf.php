@@ -493,6 +493,7 @@ table{
 	}
 	.pro-content p,h3{
 		padding: 0 1rem 0 1rem;
+		font-size: 1rem;
 	}
 	#myBtn,#myBtn1{
 		padding: 1rem;
@@ -511,13 +512,19 @@ table{
 	.con-menu li{
 		margin: .2rem;
 	}
-	
+	.con-menu form{
+		margin: 1rem 0;
+	}
 	.con-input{
 		width: 80vw;
 		margin: 0 8%;
 	}
 	.con-label{
 		margin: 0 1rem;
+	}
+	.con-submit{
+		width: 80vw;
+		margin: 1rem 10%;
 	}
 
 }
