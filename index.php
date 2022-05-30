@@ -14,20 +14,14 @@ if(isset($_POST['submit'])){
 
   if($con->query($id) === TRUE){
      $success= "Message sent sucessfully.";
-     ?>
-     <script>
-       window.location.href='index.php#contact'
-     </script>
-     <?php
+    //  redirect('index.php');
     }
     else
     {
-     $fail = "Something went wrong, please try again later."
-     ?>
-     <script>
-       window.location.href='index.php#contact';
-     </script>
-     <?php
+     $fail = "Something went wrong, please try again later.";
+    //    redirect('index.php');
+    // omitted redirect functions as it doesn't show the messages
+    // the $fail and $success messages
     }
     $con->close();
 }
@@ -43,7 +37,7 @@ if(isset($_POST['submit'])){
                 </span>
                 <span><p class="home-cont">Lorem ipsum sit dolar imet ipsum sit dolar</p></span>
                 </span>
-                <div class="img"><img alt="Profile photo" src="img/avatar.jpg"></div>
+                <div class="img"><img class="prf-img" alt="Profile photo" src="img/avatar.jpg"></div>
             </div>
         </section>
         <section id="about" class="container about">
@@ -103,8 +97,8 @@ if(isset($_POST['submit'])){
                     </li>
                 </div>
                 <div class="con-form">
-                    <?php echo $success ?>
-                    <?php echo $fail ?>
+                    <span class="success"><?php echo $success ?></span>
+                    <span class="danger"><?php echo $fail ?></span>
                     <form method="post">
                         <label class="con-label" for="Name">Name</label><br>
                             <input class="con-input" type="text" required name="name" placeholder="e.g. Isaac L Songate"><br>
