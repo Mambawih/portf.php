@@ -504,5 +504,20 @@ table{
 	#contact{
 		padding: 0;
 	}
+  
+	.con-menu{
+		display: inline-grid;
+	}
+	.con-menu li{
+		margin: .2rem;
+	}
+	
+	.con-input{
+		width: 80vw;
+		margin: 0 8%;
+	}
+	.con-label{
+		margin: 0 1rem;
+	}
 
 }
