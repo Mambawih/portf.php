@@ -526,5 +526,12 @@ table{
 		width: 80vw;
 		margin: 1rem 10%;
 	}
+	.foot-con>hr{
+		display: none;
+	}
+	.foot>h3{
+		text-align: center;
+		font-size: 1.2rem
+	}
 
 }
