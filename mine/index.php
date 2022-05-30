@@ -1,9 +1,16 @@
 <?php
-// if (!isset($_SESSION['login'])){?>
-<!-- //     <script>window.location.href="login.php"</script>--><?php 
-// }
-include "../database.php";
-include "../function.php";
+session_start();
+include "header.php";
+
+// below code have bug
+// not anymore....tadaaaaa!!!!!!
+// the bug occured as you forgot to start session
+
+if (!isset($_SESSION['ADMIN_LOGIN'])){
+    redirect('login.php');
+    exit();
+}
+
 
 $sql="select * from trial order by id";
 $res=mysqli_query($con,$sql);
