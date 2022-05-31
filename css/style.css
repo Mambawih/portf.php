@@ -560,4 +560,17 @@ table{
 	.content .home-cont{
 		margin: 0 0 0 1rem;
 	}
+	.abt-img img{
+		padding: 2rem;
+	}
+	.abt-content{
+		padding: 2rem;
+		width: 70%
+	}
+	.abt-content p{
+		font-size: 1.3rem;
+		color: #ffffff;
+	}
+	.pro-content{
+	}
 }
