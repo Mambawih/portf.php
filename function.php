@@ -33,4 +33,13 @@ function time_elapsed_string($datetime, $full = false) {
     if (!$full) $string = array_slice($string, 0, 1);
     return $string ? implode(', ', $string) . ' ago' : 'just now';
 }
+
+function redirect($link){
+	?>
+	<script>
+	window.location.href='<?php echo $link?>';
+	</script>
+	<?php
+	die();
+}
 ?>
