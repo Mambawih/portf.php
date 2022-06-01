@@ -16,15 +16,7 @@ $sql="select * from trial order by id";
 $res=mysqli_query($con,$sql);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Portfolio Admin Page</title>
-        <link rel="icon" href="../img/avatar.jpg">
-        <link rel="stylesheet" href="../css/style.css">
-    </head>
-    <body>
-        <section>
+        <section class="main-body">
             <div>
                 <table>
                     <thead>
