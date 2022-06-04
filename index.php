@@ -66,9 +66,9 @@ $res = mysqli_query($con, $sql);
                         while($row=mysqli_fetch_assoc($res)){
                         ?>
                         <li class="pro-list">
-                            <h3><?php echo $row['name'] ?></h3><hr>
+                            <h3><?php echo $i,") ",  $row['name'] ?></h3><hr>
                             <span class="pro-item">
-                                <p><?php echo $row['about']?></p>
+                                <p><?php echo  $row['about']?></p>
                             </span>
                         </li>
                         <?php
