@@ -18,6 +18,13 @@ $sql1="select * from projects order by id";
 $res1=mysqli_query($con,$sql1);
 ?>
 
+
+        
+        <section class="btn-links">
+            <button class="page-btn" data-page="page1">Messages</button>
+            <button class="page-btn" data-page="page2">Blogs</button>
+            <button class="page-btn" data-page="page3">Projects</button>
+        </section>
         <section class="main-body main">
             <div id="page1">
                 <table>
@@ -91,7 +98,7 @@ $res1=mysqli_query($con,$sql1);
 
         <section class="main-body3 main">
             <div id="page3">
-                <span><a href="#">Add items</a></span>
+                <span><a href="manage_project.php">Add items</a></span>
                 <table>
                     <thead>
                         <tr>
