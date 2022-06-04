@@ -57,7 +57,7 @@ include "../function.php";
             </section>
         </header>
         <section class="btn-links">
-            <button class="page-btn" data-page="page1">Page 1</button>
-            <button class="page-btn" data-page="page2">Page 2</button>
-            <button class="page-btn" data-page="page3">Page 3</button>
+            <button class="page-btn" data-page="page1">Messages</button>
+            <button class="page-btn" data-page="page2">Blogs</button>
+            <button class="page-btn" data-page="page3">Projects</button>
         </section>
