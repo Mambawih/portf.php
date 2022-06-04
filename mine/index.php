@@ -22,11 +22,12 @@ $res=mysqli_query($con,$sql);
                     <thead>
                         <tr>
                             <th width="5%">Sl.no.</th>
-                            <th width="15%">Name</th>
-                            <th width="20%">Mobile</th>
-                            <th width="20%">Email</th>
-                            <th width="25%">Subject</th>
-                            <th width="15%">Added on</th>
+                            <th width="10%">Name</th>
+                            <th width="10%">Mobile</th>
+                            <th width="10%">Email</th>
+                            <th width="10%">Subject</th>
+                            <th width="45%">Message</th>
+                            <th width="10%">Sent</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,10 +41,13 @@ $res=mysqli_query($con,$sql);
                             <td><?php echo $row['mobile']; ?></td>
                             <td><?php echo $row['email']; ?></td>
                             <td><?php echo $row['subject']; ?></td>
+                            <td><?php echo $row['message']; ?></td>
                             <td style="text-align:center;">
                                 <?php 
-                                $dateStr=strtotime($row['added_on']);
-                                echo date('j M, Y',$dateStr);?><br><?php
+                                // $dateStr=strtotime($row['added_on']);
+                                // echo date('j M, Y',$dateStr);
+                                ?>
+                                <?php
                                 echo time_elapsed_string($row['added_on'])
                                 ?>
                             </td>
@@ -81,9 +85,9 @@ $res=mysqli_query($con,$sql);
                             <td><?php echo $row['email']; ?></td>
                             <td><?php echo $row['subject']; ?></td>
                             <td style="text-align:center;">
+                                <?php
+                                ?><br>
                                 <?php 
-                                $dateStr=strtotime($row['added_on']);
-                                echo date('j M, Y',$dateStr);?><br><?php
                                 echo time_elapsed_string($row['added_on'])
                                 ?>
                             </td>
