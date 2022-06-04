@@ -10,15 +10,40 @@ include "../function.php";
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="adm-sty.css">
         <link rel="icon" href="../img/avatar.jpg">
         <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> -->
-        <title>Portfolio Adimn Page</title>
-        
+        <title>Portfolio Admin Page</title>
+        <script type="text/javascript">
+		
+		function showPage(page){
+
+			document.querySelectorAll('div').forEach(div =>{
+				div.style.display = 'none';
+			})
+
+			document.querySelector(`#${page}`).style.display = 'block';
+		}
+
+		document.addEventListener('DOMContentLoaded',function(){
+			document.querySelectorAll('button').forEach(button =>{
+				button.onclick = function(){
+					showPage(this.dataset.page);
+				}
+			})
+		})
+
+	</script>
+    <style>
+            div{
+                display:none;
+            }
+        </style>
     </head>
     <body>
         <header id="home" class="header">
             <h2 class="logo">logo</h2>
-            <div id="menuToggle">
+            <section id="menuToggle">
                 <input class="hamb" type="checkbox">
                 <span></span>
                 <span></span>
@@ -29,5 +54,10 @@ include "../function.php";
                     <li class="navlink"><a href="#projects">projects</a></li>
                     <li class="navlink"><a href="#contact">Contact</a></li> -->
                 </nav>
-            </div>
+            </section>
         </header>
+        <section class="btn-links">
+            <button class="page-btn" data-page="page1">Page 1</button>
+            <button class="page-btn" data-page="page2">Page 2</button>
+            <button class="page-btn" data-page="page3">Page 3</button>
+        </section>
