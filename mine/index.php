@@ -14,6 +14,8 @@ if (!isset($_SESSION['ADMIN_LOGIN'])){
 
 $sql="select * from trial order by id";
 $res=mysqli_query($con,$sql);
+$sql1="select * from projects order by id";
+$res1=mysqli_query($con,$sql1);
 ?>
 
         <section class="main-body main">
@@ -38,10 +40,10 @@ $res=mysqli_query($con,$sql);
                         <tr>
                             <td style="text-align:center;"><?php echo $i; ?></td>
                             <td><?php echo $row['name']; ?></td>
-                            <td><?php echo $row['mobile']; ?></td>
+                            <td style="text-align:center;"><?php echo $row['mobile']; ?></td>
                             <td><?php echo $row['email']; ?></td>
                             <td><?php echo $row['subject']; ?></td>
-                            <td><?php echo $row['message']; ?></td>
+                            <td style="text-align:justify;"><?php echo $row['message']; ?></td>
                             <td style="text-align:center;">
                                 <?php 
                                 // $dateStr=strtotime($row['added_on']);
@@ -74,27 +76,14 @@ $res=mysqli_query($con,$sql);
                         </tr>
                     </thead>
                     <tbody>
-                    <?php 
-                        $i=1;
-                        while($row=mysqli_fetch_assoc($res)){
-                        ?>
                         <tr>
-                            <td style="text-align:center;"><?php echo $i; ?></td>
-                            <td><?php echo $row['name']; ?></td>
-                            <td><?php echo $row['mobile']; ?></td>
-                            <td><?php echo $row['email']; ?></td>
-                            <td><?php echo $row['subject']; ?></td>
-                            <td style="text-align:center;">
-                                <?php
-                                ?><br>
-                                <?php 
-                                echo time_elapsed_string($row['added_on'])
-                                ?>
-                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
-                        <?php
-                        $i++;
-                        }?>
                     </tbody>
                 </table>
             </div>
@@ -102,33 +91,34 @@ $res=mysqli_query($con,$sql);
 
         <section class="main-body3 main">
             <div id="page3">
+                <span><a href="#">Add items</a></span>
                 <table>
                     <thead>
                         <tr>
                             <th width="5%">Sl.no.</th>
-                            <th width="15%">Naam</th>
-                            <th width="20%">Mobile</th>
-                            <th width="20%">Email</th>
-                            <th width="25%">Subject</th>
-                            <th width="15%">Added on</th>
+                            <th width="10%">Name</th>
+                            <th width="20%">about</th>
+                            <th width="10%">link text</th>
+                            <th width="15%">link</th>
+                            <th width="10%">tech used</th>
+                            <th width="10%">Added on</th>
                         </tr>
                     </thead>
                     <tbody>
                     <?php 
                         $i=1;
-                        while($row=mysqli_fetch_assoc($res)){
+                        while($row1=mysqli_fetch_assoc($res1)){
                         ?>
                         <tr>
                             <td style="text-align:center;"><?php echo $i; ?></td>
-                            <td><?php echo $row['name']; ?></td>
-                            <td><?php echo $row['mobile']; ?></td>
-                            <td><?php echo $row['email']; ?></td>
-                            <td><?php echo $row['subject']; ?></td>
+                            <td><?php echo $row1['name']; ?></td>
+                            <td><?php echo $row1['about']; ?></td>
+                            <td><?php echo $row1['link_text']; ?></td>
+                            <td><?php echo $row1['link']; ?></td>
+                            <td><?php echo $row1['tech']; ?></td>
                             <td style="text-align:center;">
-                                <?php 
-                                $dateStr=strtotime($row['added_on']);
-                                echo date('j M, Y',$dateStr);?><br><?php
-                                echo time_elapsed_string($row['added_on'])
+                                <?php
+                                echo time_elapsed_string($row1['added_on'])
                                 ?>
                             </td>
                         </tr>
