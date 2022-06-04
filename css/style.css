@@ -31,6 +31,9 @@ html::-webkit-scrollbar-thumb{
 	font-size: 3rem;
 	padding: 1rem;
 }
+.logo a{
+	color: white;
+}
 
 .navbar{
 	display: flex;
