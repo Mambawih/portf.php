@@ -119,7 +119,7 @@ $res1=mysqli_query($con,$sql1);
                         <tr>
                             <td style="text-align:center;"><?php echo $i; ?></td>
                             <td><?php echo $row1['name']; ?></td>
-                            <td><?php echo $row1['about']; ?></td>
+                            <td style="text-align:justify;"><?php echo $row1['about']; ?></td>
                             <td><?php echo $row1['link_text']; ?></td>
                             <td><?php echo $row1['link']; ?></td>
                             <td><?php echo $row1['tech']; ?></td>
