@@ -18,7 +18,7 @@
                     <hr>
                     <div class="foot">
                         <h3>Get in touch</h3>
-                        <div><a class="footlinks" href="#">Isaac L Songate</a></div>
+                        <div><a class="footlinks" href="#"><i class="fas fa-user">&nbsp&nbspIsaac L Songate</i></a></div>
                         <div><a class="footlinks" href="#"><i class="fas fa-map-marker-alt">&nbsp&nbspShanveng, Rengkai, Churachandpur, Manipur</i></a></div>
                         <div><a class="footlinks" href="#"><i class="fas fa-envelope">&nbsp&nbspsongate.isaac@gmail.com</i></a></div>
                         <div><a class="footlinks" href="#"><i class="fas fa-phone">&nbsp&nbsp8721014381</i></a></div>
