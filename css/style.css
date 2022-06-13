@@ -171,9 +171,9 @@ span>.home-cont{
 	padding: 0 0 0 2rem;
 
 }
-/* .projects>h1, .projects>.pro-content{
-	padding: 0 0 0 50%;
-} */
+.projects>h1 {
+	text-align:center;
+}
 
 .pro-content{
 	display: inline-flex;
@@ -181,17 +181,20 @@ span>.home-cont{
 	justify-content: center;
 }
 
-
+.pro-btn{
+	margin-top: 5rem;
+}
 .pro-list{
 	/* border: 1px solid #5bffef; */
-	margin: 0 0 0 5rem;
+	margin: 2rem 0 2rem 5rem;
 	width: 50%;
 }
 .pro-btn a{
 	width: 5rem;
-	margin: 5rem 0 0 19rem;
+	margin: 0 0 0 19rem;
 	border: 1px solid black;
 	padding: .5rem;
+	border-radius: 4px;
 }
 .pro-list>h3{
 	font-size: 1.4rem;
