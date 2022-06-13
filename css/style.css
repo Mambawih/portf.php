@@ -171,20 +171,24 @@ span>.home-cont{
 	padding: 0 0 0 2rem;
 
 }
-.projects>h1, .projects>.pro-content{
+/* .projects>h1, .projects>.pro-content{
 	padding: 0 0 0 50%;
-}
+} */
 
 .pro-content{
-	display: flex;
+	display: inline-flex;
 	flex-wrap: wrap;
 }
 
 
 .pro-list{
 	/* border: 1px solid #5bffef; */
-	margin: .5rem;
-	width: 30rem;
+	margin: 0 0 0 15rem;
+	width: 40%;
+}
+.pro-btn button{
+	width: 5rem;
+	margin: 1rem 0 0 4rem;
 }
 .pro-list>h3{
 	font-size: 1.4rem;
@@ -238,7 +242,7 @@ span>.home-cont{
 }
 .con-item{
 	color: #03e0fd;
-	
+
 	/* background: -webkit-linear-gradient(#000000,#ff0000,#ffffff );
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent; */
