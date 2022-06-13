@@ -178,17 +178,20 @@ span>.home-cont{
 .pro-content{
 	display: inline-flex;
 	flex-wrap: wrap;
+	justify-content: center;
 }
 
 
 .pro-list{
 	/* border: 1px solid #5bffef; */
-	margin: 0 0 0 15rem;
-	width: 40%;
+	margin: 0 0 0 5rem;
+	width: 50%;
 }
-.pro-btn button{
+.pro-btn a{
 	width: 5rem;
-	margin: 1rem 0 0 4rem;
+	margin: 5rem 0 0 19rem;
+	border: 1px solid black;
+	padding: .5rem;
 }
 .pro-list>h3{
 	font-size: 1.4rem;
