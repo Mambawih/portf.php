@@ -2,7 +2,6 @@
 	padding: 0;
 	margin: 0;
 	text-decoration: none;
-	text-transform: capitalize;
 	list-style: none;
 }
 
@@ -238,9 +237,11 @@ span>.home-cont{
 	font-size: 1.3rem;
 }
 .con-item{
-	background: -webkit-linear-gradient(#1900ff,40%,#ffffff );
+	color: #03e0fd;
+	
+	/* background: -webkit-linear-gradient(#000000,#ff0000,#ffffff );
 	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent; */
 }
 .con-input{
 	height: 2rem;
@@ -254,6 +255,9 @@ span>.home-cont{
 	width: 200%;
 	margin: 1rem .5rem 0 .5rem ;
 	padding: .4rem;
+	font-size: 1rem;
+	border-radius: .5rem;
+	background-color: #03e0fd;
 }
 .con-label{
 	color: #eff6f8;
